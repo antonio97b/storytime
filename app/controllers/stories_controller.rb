@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   def index
-    @stories = Story.all
+    @stories = Story.all.order(created_at: :desc)
   end
 
   def new
@@ -43,5 +43,6 @@ class StoriesController < ApplicationController
   def story_params
     params.require(:story).permit(:title)
   end
+
 
 end

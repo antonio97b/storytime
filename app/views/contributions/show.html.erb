@@ -1,6 +1,11 @@
-<p><%= @contribution.sentence %></p>
+<div id="image">
+<%= image_tag("Animals/#{1+rand(15).ceil}.png") %>
+</div>
 
-<%= @contribution.username %>
+<img src="/assets/Animals/15-6f54a1a31a981788406aa8dcf7b8d916427229d32da64e66534bee4aa1e2a204.png" alt="15 6f54a1a31a981788406aa8dcf7b8d916427229d32da64e66534bee4aa1e2a204">
+
+<p><%= @contribution.sentence %></p>
+<p><%= @contribution.username %></p>
 
 <%= link_to 'edit sentence', edit_story_contribution_path(@story, @contribution)%>
 
