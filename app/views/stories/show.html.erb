@@ -1,6 +1,17 @@
 <h1><%= @story.title %></h1>
+<%= link_to "Edit Story Title", edit_story_path(@story) %>
+<div id="content">
 
-<%= link_to "Edit", edit_story_path(@story) %> |
-<%= link_to "Delete", story_path(@story), :data => {:confirm => "Are you sure?", :method => "delete"} %>
+<% if @story.contributions.any? %>
+<% @story.contributions.each do |contribution| %>
+  <%= link_to contribution.sentence, story_contribution_path(contribution) %>
+<% end %>
+</div>
 
+<% else %>
+  <p>There have been no contributions to this story yet.  Please add a    contribution</p>
+<% end %>
+<p><%= link_to "Contribute to the story", new_story_contribution_path(@story) %></p>
+
+<%= link_to "Delete Story", story_path(@story), :data => {:confirm => "Are you sure?", :method => "delete"} %>
 <p><%= link_to "Return to Stories", stories_path %></p>
