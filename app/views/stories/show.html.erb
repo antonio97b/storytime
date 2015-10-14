@@ -4,7 +4,7 @@
 
 <% if @story.contributions.any? %>
 <% @story.contributions.each do |contribution| %>
-  <%= link_to contribution.sentence, story_contribution_path(contribution) %>
+  <%= link_to contribution.sentence, story_contribution_path(@story, contribution) %>
 <% end %>
 </div>
 

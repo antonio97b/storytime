@@ -1,1 +1,9 @@
-Hello World
+<p><%= @contribution.sentence %></p>
+
+<%= @contribution.username %>
+
+<%= link_to 'edit sentence', edit_story_contribution_path(@story, @contribution)%>
+
+<%= link_to 'delete sentence', story_contribution_path(@story, @contribution), :data => {:confirm => "Are you sure?", :method => "delete"} %>
+
+<p><%= link_to "Return to Story", story_path(@story) %></p>
