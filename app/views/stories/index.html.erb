@@ -1,0 +1,4 @@
+<h1>StoryTime</h1>
+  <% @stories.each do |story| %>
+  <%= link_to story.title, story_path(story) %>
+<% end %>
