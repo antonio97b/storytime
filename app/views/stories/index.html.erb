@@ -1,4 +1,11 @@
 <h1>StoryTime</h1>
+
+<ul>
   <% @stories.each do |story| %>
-  <%= link_to story.title, story_path(story) %>
-<% end %>
+    <li><%= link_to story.title, story_path(story) %></li>
+  <% end %>
+</ul>
+
+<div id ="editlink">
+  <%= link_to "Add Story", new_story_path %>
+</div>
