@@ -1,11 +1,13 @@
 <div id="image">
-  <%= image_tag("Animals/#{1+rand(15).ceil}.png", height: 40) %>
+  <%= image_tag(@contribution.image, height: 40) %>
 </div>
+
 
 <%= form_for [@story, @contribution] do |f| %>
   <%= f.label :username %>
 <p><%= f.text_field :username %></p>
   <p><%= f.text_area :sentence, cols: 100, rows: 2, maxlength: 140, placeholder: "Contribute to the story. Add Sentence here..." %>
   </p>
+  <%= f.hidden_field :image, :value => @contribution.image %>
   <%= f.submit %>
 <% end %>

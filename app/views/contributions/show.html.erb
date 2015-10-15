@@ -1,6 +1,8 @@
 <div class="container">
 <h1> <%= @contribution.sentence %> </h1>
 
+<%= image_tag("#{@contribution.image}", height: 40) %>
+
   <div id= "usercontent">
     <p><%= @contribution.username %></p>
   </div>

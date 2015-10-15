@@ -2,11 +2,13 @@ class ContributionsController < ApplicationController
   def new
     @story = Story.find(params[:story_id])
     @contribution = @story.contributions.new
+    @contribution.image = "Animals/#{1+rand(15).ceil}.png"
   end
 
   def create
     @story = Story.find(params[:story_id])
     @contribution = @story.contributions.new(contribution_params)
+    @contribution.image = params[:contribution][:image]
     if @contribution.save
       redirect_to story_path(@contribution.story)
     else
