@@ -1,10 +1,10 @@
 <h1><%= @story.title %></h1>
 <%= link_to "Edit Story Title", edit_story_path(@story) %>
-<div id="content">
 
+<div id="content">
 <% if @story.contributions.any? %>
 <% @story.contributions.each do |contribution| %>
-  <%= link_to contribution.sentence, story_contribution_path(@story, contribution) %> 
+  <%= link_to contribution.sentence, story_contribution_path(@story, contribution) %>
 <% end %>
 </div>
 

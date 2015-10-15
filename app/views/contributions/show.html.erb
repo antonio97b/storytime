@@ -1,14 +1,15 @@
-<div id="image">
-<%= image_tag("Animals/#{1+rand(15).ceil}.png") %>
+<div class="container">
+<h1> <%= @contribution.sentence %> </h1>
+
+  <div id= "usercontent">
+    <p><%= @contribution.username %></p>
+  </div>
 </div>
 
-<img src="/assets/Animals/15-6f54a1a31a981788406aa8dcf7b8d916427229d32da64e66534bee4aa1e2a204.png" alt="15 6f54a1a31a981788406aa8dcf7b8d916427229d32da64e66534bee4aa1e2a204">
-
-<p><%= @contribution.sentence %></p>
-<p><%= @contribution.username %></p>
-
+<div class="container">
 <%= link_to 'edit sentence', edit_story_contribution_path(@story, @contribution)%>
 
 <%= link_to 'delete sentence', story_contribution_path(@story, @contribution), :data => {:confirm => "Are you sure?", :method => "delete"} %>
 
 <p><%= link_to "Return to Story", story_path(@story) %></p>
+</div>
