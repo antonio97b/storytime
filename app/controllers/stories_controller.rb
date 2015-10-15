@@ -39,6 +39,11 @@ class StoriesController < ApplicationController
     redirect_to stories_path
   end
 
+  def images
+    @imagesAll = Dir.entries("app/assets/images/Animals")
+    @images = @imagesAll.select{ |i| i[/\.png$/] }
+  end
+
   private
   def story_params
     params.require(:story).permit(:title)
