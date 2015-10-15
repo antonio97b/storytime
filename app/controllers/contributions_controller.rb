@@ -36,6 +36,8 @@ class ContributionsController < ApplicationController
     end
   end
 
+  # add destroy action here
+
   private
     def contribution_params
       params.require(:contribution).permit(:username, :sentence)
