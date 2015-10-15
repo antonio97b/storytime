@@ -5,7 +5,7 @@
 
 <%= form_for [@story, @contribution] do |f| %>
   <%= f.label :username %>
-<p><%= f.text_field :username %></p>
+  <p><%= f.text_field :username %></p>
   <p><%= f.text_area :sentence, cols: 100, rows: 2, maxlength: 140, placeholder: "Contribute to the story. Add Sentence here..." %>
   </p>
   <%= f.hidden_field :image, :value => @contribution.image %>

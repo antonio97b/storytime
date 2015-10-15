@@ -1,11 +1,16 @@
-  <h1>StoryTime</h1>
+<h1>StoryTime</h1>
 
+<div id="storylist">
   <ul>
     <% @stories.each do |story| %>
-      <li><%= link_to story.title, story_path(story) %></li>
+        <li><%= link_to story.title, story_path(story) %></li>
     <% end %>
   </ul>
+</div>
 
-  <div id ="editlink">
-    <%= link_to "Add Story", new_story_path %>
-  </div>
+<div id ="editlink">
+  <%= link_to "Add Story", new_story_path %>
+</div>
+<div id ="imagelink">
+  <%= link_to "Click Here to See All Images", stories_images_path %>
+</div>
