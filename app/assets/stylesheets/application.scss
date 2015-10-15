@@ -38,9 +38,21 @@ div#image {
 h1 {
   text-align: center;
   font-size: 6em;
+  font-weight: 800;
+  color: #ffffff;
+  }
+
+body {
+  background-image: url("background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 li {
   list-style-type: none;
   font-size:25px;
+}
+
+a {
+  color:black;
 }

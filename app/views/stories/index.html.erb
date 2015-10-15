@@ -1,16 +1,20 @@
-<h1>StoryTime</h1>
+<div class = "container">
+  <div class ="header">
+  <h1>StoryTime</h1>
+  </div>
 
-<div id="storylist">
-  <ul>
-    <% @stories.each do |story| %>
-        <li><%= link_to story.title, story_path(story) %></li>
-    <% end %>
-  </ul>
-</div>
+  <div id="storylist">
+    <ul>
+      <% @stories.each do |story| %>
+          <li><%= link_to story.title, story_path(story) %></li>
+      <% end %>
+    </ul>
+  </div>
 
-<div id ="editlink">
-  <%= link_to "Add Story", new_story_path %>
-</div>
-<div id ="imagelink">
-  <%= link_to "Click Here to See All Images", stories_images_path %>
+  <div id ="editlink">
+    <%= link_to "Add Story", new_story_path %>
+  </div>
+  <div id ="imagelink">
+    <%= link_to "Click Here to See All Images", stories_images_path %>
+  </div>
 </div>
